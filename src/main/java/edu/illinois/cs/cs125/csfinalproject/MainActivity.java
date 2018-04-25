@@ -28,15 +28,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -46,6 +39,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +52,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("CSFinal:Main", "Refreshed");
                 startAPICall();
+                toWear();
+                toDo();
             }
         });
 
     }
+    void startAPICall() {
+    }
+    void toWear() {
+        // if rain then give stuff to take etc.
+    }
+    void toDo () {
+        String[] rain = new String[]; //String arrays for what to do in the rain etc.
+        String[] sun = new String[];
+        String[] snow = new  String[]; // wow
+    }
+
 }
